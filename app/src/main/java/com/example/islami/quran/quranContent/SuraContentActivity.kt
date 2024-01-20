@@ -35,9 +35,12 @@ class SuraContentActivity : AppCompatActivity() {
             .open(suraFile)
             .bufferedReader()
             .use { it.readText() }
-        sura = suraText.split("\n").filter { it.isNotBlank() }.mapIndexed { index, ayah ->
-                ayah+"(${index+1})"
-        }
+        sura = suraText
+            .split("\n")
+            .filter { it.isNotBlank() }
+            .mapIndexed { index, ayah ->
+                ayah + "(${index + 1})"
+            }
         adapter = SuraContentAdapter(sura)
         binding.suraRecyclerView.adapter = adapter
         binding.suraRecyclerView.layoutManager = LinearLayoutManager(this)

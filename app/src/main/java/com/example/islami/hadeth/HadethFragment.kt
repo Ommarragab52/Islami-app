@@ -16,13 +16,13 @@ class HadethFragment : Fragment() {
     private lateinit var binding: FragmentHadethBinding
     private lateinit var adapter: HadethAdapter
     private lateinit var ahadethNamesList: List<String>
-    private lateinit var  ahadethList : List<String>
+    private lateinit var ahadethList: List<String>
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentHadethBinding.inflate(layoutInflater,container,false)
+        binding = FragmentHadethBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
@@ -34,11 +34,11 @@ class HadethFragment : Fragment() {
     }
 
     private fun onHadethClick() {
-        adapter.onHadethItemClick = object :HadethAdapter.OnHadethItemClick{
+        adapter.onHadethItemClick = object : HadethAdapter.OnHadethItemClick {
             override fun onClick(hadethName: String, position: Int) {
-                val intent = Intent(this@HadethFragment.context,HadethContentActivity::class.java)
-                intent.putExtra(CONSTANTS.HADETH_NAME,hadethName)
-                intent.putExtra(CONSTANTS.HADETH_CONTENT,ahadethList[position])
+                val intent = Intent(this@HadethFragment.context, HadethContentActivity::class.java)
+                intent.putExtra(CONSTANTS.HADETH_NAME, hadethName)
+                intent.putExtra(CONSTANTS.HADETH_CONTENT, ahadethList[position])
                 startActivity(intent)
             }
         }
@@ -54,10 +54,18 @@ class HadethFragment : Fragment() {
 
     private fun initData() {
         val ahadeth = getDataFromAssets()
-        ahadethList = ahadeth.split("#").map { it.trim() }.filter { it.isNotBlank() }
-        ahadethNamesList = ahadethList.map {
-            it.lines().firstOrNull().toString().trim()
-        }
+        ahadethList = ahadeth
+            .split("#")
+            .map { it.trim() }
+            .filter { it.isNotBlank() }
+
+        ahadethNamesList = ahadethList
+            .map {
+                it.lines()
+                    .firstOrNull()
+                    .toString()
+                    .trim()
+            }
     }
 
     private fun initViews() {
