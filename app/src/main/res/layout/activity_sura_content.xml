@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".quran.quranContent.SuraContentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layoutDirection="ltr"
+        app:liftOnScrollColor="@color/transparent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:navigationIcon="@drawable/ic_back">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/jf_flat_regular"
+                android:text="@string/islami"
+                android:textSize="32sp" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <ImageView
+            android:id="@+id/white_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="50dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/white_background" />
+
+        <TextView
+            android:id="@+id/sura_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:text="سورة"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/white_bg"
+            app:layout_constraintStart_toStartOf="@id/white_bg"
+            app:layout_constraintTop_toTopOf="@id/white_bg" />
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@id/white_bg"
+            app:layout_constraintStart_toStartOf="@id/white_bg"
+            app:layout_constraintTop_toBottomOf="@id/sura_name_tv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sura_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/white_bg"
+            app:layout_constraintEnd_toEndOf="@id/white_bg"
+            app:layout_constraintStart_toStartOf="@id/white_bg"
+            app:layout_constraintTop_toBottomOf="@id/line_view"
+            tools:listitem="@layout/item_sura_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Islami</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sura_number">Sura number</string>
+    <string name="sura_name">Sura name</string>
+    <string name="islami">Islami</string>
+    <string name="quran">Quran</string>
+    <string name="hadeth">hadeth</string>
+    <string name="sebha">sebha</string>
+    <string name="radio">radio</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ahadeth">الاحاديث</string>
+</resources>
