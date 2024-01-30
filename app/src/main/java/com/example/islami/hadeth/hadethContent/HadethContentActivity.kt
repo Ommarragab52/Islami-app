@@ -10,7 +10,7 @@ class HadethContentActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHadethContentBinding
     private lateinit var hadethName: String
-    private lateinit var hadethContent: String
+    private lateinit var hadethContent: List<String>
     private lateinit var adapter: HadethContentAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,18 +18,28 @@ class HadethContentActivity : AppCompatActivity() {
         binding = ActivityHadethContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-        setData()
+        initData()
+        initViews()
+        bindData()
         binding.toolbar.setNavigationOnClickListener {
             finish()
         }
+
     }
 
-    private fun setData() {
+    private fun bindData() {
+        adapter.bindItems(hadethContent)
+    }
+
+    private fun initData() {
         hadethName = intent.getStringExtra(CONSTANTS.HADETH_NAME).toString()
-        hadethContent = intent.getStringExtra(CONSTANTS.HADETH_CONTENT).toString()
-        val hadeth = hadethContent.substringAfter("\n")
+        val hadeth = intent.getStringExtra(CONSTANTS.HADETH_CONTENT).toString()
+        hadethContent = hadeth.substringAfter("\n").lines()
+    }
+
+    private fun initViews() {
         binding.hadethNameTv.text = hadethName
-        adapter = HadethContentAdapter(listOf(hadeth))
+        adapter = HadethContentAdapter(null)
         binding.hadethRecyclerView.adapter = adapter
         binding.hadethRecyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

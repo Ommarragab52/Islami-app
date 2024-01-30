@@ -6,13 +6,17 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.islami.databinding.ItemHadethContentBinding
 
-class HadethContentAdapter(private val hadethList: List<String>? = null) :
+class HadethContentAdapter(private var hadethList: List<String>? = null) :
     Adapter<HadethContentAdapter.HadethContentViewHolder>() {
     class HadethContentViewHolder(private val binding: ItemHadethContentBinding) :
         ViewHolder(binding.root) {
         fun bind(hadeth: String) {
             binding.hadethTv.text = hadeth
         }
+    }
+
+    fun bindItems(list: List<String>) {
+        hadethList = list
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HadethContentViewHolder {

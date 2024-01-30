@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     tools:context=".quran.QuranFragment">
 
     <ImageView
@@ -26,11 +27,12 @@
         app:layout_constraintTop_toBottomOf="@id/quran_image" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/sura_name"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:fontFamily="@font/jf_flat_regular"
         app:layout_constraintBottom_toTopOf="@id/view_line2"
         app:layout_constraintEnd_toStartOf="@id/view_line3"
@@ -38,11 +40,12 @@
         app:layout_constraintTop_toBottomOf="@id/view_line1" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/sura_number"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:fontFamily="@font/jf_flat_regular"
         app:layout_constraintBottom_toTopOf="@id/view_line2"
         app:layout_constraintEnd_toEndOf="parent"
