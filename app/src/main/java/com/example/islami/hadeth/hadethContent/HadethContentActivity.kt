@@ -18,8 +18,8 @@ class HadethContentActivity : AppCompatActivity() {
         binding = ActivityHadethContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-        initViews()
         initData()
+        initViews()
         bindData()
         binding.toolbar.setNavigationOnClickListener {
             finish()

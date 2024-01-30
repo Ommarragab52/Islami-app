@@ -2,7 +2,75 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Islami" parent="Theme.Material3.DayNight">
         <!-- Customize your dark theme here. -->
-         <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="mainActivityStyle">
+        <item name="android:background">@drawable/main_background_night</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:textColor">@color/colorOnPrimaryVariantDark</item>
+    </style>
+
+    <style name="toolbarStyle">
+        <item name="navigationIcon">@drawable/ic_back_night</item>
+    </style>
+
+    <style name="contentTextColor">
+        <item name="android:textColor">@color/colorOnPrimaryDark</item>
+    </style>
+
+    <style name="contentBackgroundStyle">
+        <item name="android:src">@drawable/dark_background</item>
+    </style>
+
+    <style name="sebhaCounterStyle">
+        <item name="android:background">@drawable/sebha_bg_night</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="backwardButtonStyle">
+        <item name="android:src">@drawable/ic_backward_night</item>
+    </style>
+
+    <style name="forwardButtonStyle">
+        <item name="android:src">@drawable/ic_forward_night</item>
+    </style>
+
+    <style name="playRadioButtonStyle">
+        <item name="android:src">@drawable/ic_play_night</item>
+    </style>
+
+    <style name="sebhaHeadImgStyle">
+        <item name="android:src">@drawable/seb7a_head_night</item>
+    </style>
+
+    <style name="sebhaBodyImgStyle">
+        <item name="android:src">@drawable/seb7a_body_night</item>
+    </style>
+
+    <style name="sebhaZekrStyle">
+        <item name="android:background">@drawable/sebha_zekr_bg_night</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="bottomNavStyle">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="itemIconTint">@color/bottom_navigation_color_night</item>
+        <item name="itemTextColor">@color/bottom_navigation_color_night</item>
+    </style>
+
+    <style name="playNotificationButtonStyle">
+        <item name="android:src">@drawable/ic_play_notification_night</item>
+    </style>
+
+    <style name="stopNotificationButtonStyle">
+        <item name="android:src">@drawable/ic_stop_notification_night</item>
+    </style>
+
+    <style name="pauseNotificationButtonStyle">
+        <item name="android:src">@drawable/ic_pause</item>
     </style>
 </resources>

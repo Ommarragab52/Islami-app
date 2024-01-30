@@ -1,12 +1,78 @@
 <resources>
+
     <!-- Base application theme. -->
     <style name="Base.Theme.Islami" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorOnPrimary">@color/black</item>
-        <item name="colorOnBackground">@color/black</item>
     </style>
 
+    <style name="mainActivityStyle">
+        <item name="android:background">@drawable/main_background</item>
+    </style>
 
+    <style name="contentBackgroundStyle">
+        <item name="android:src">@drawable/white_background</item>
+    </style>
+
+    <style name="contentTextColor">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="sebhaHeadImgStyle">
+        <item name="android:src">@drawable/seb7a_head</item>
+    </style>
+
+    <style name="sebhaBodyImgStyle">
+        <item name="android:src">@drawable/seb7a_body</item>
+    </style>
+
+    <style name="sebhaCounterStyle">
+        <item name="android:background">@drawable/sebha_bg</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="backwardButtonStyle">
+        <item name="android:src">@drawable/ic_backward</item>
+    </style>
+
+    <style name="forwardButtonStyle">
+        <item name="android:src">@drawable/ic_forward</item>
+    </style>
+
+    <style name="playRadioButtonStyle">
+        <item name="android:src">@drawable/ic_play</item>
+    </style>
+
+    <style name="sebhaZekrStyle">
+        <item name="android:background">@drawable/sebha_zekr_bg</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="toolbarStyle">
+        <item name="navigationIcon">@drawable/ic_back</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="bottomNavStyle">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="itemIconTint">@color/bottom_navigation_color</item>
+        <item name="itemTextColor">@color/bottom_navigation_color</item>
+    </style>
+
+    <style name="playNotificationButtonStyle">
+        <item name="android:src">@drawable/ic_play_notification</item>
+    </style>
+
+    <style name="stopNotificationButtonStyle">
+        <item name="android:src">@drawable/ic_stop_notification</item>
+    </style>
+
+    <style name="pauseNotificationButtonStyle">
+        <item name="android:src">@drawable/ic_pause</item>
+    </style>
 
 </resources>
